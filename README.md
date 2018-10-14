@@ -2,7 +2,7 @@
 StrokeSense is a Python-based iOS application for stroke detection.
 
 ## About
-Although strokes are the 2nd most common cause of death around the world (10.8% of all deaths result from strokes), more than 73% of people do not know how to identify if someone is suffering from a stroke. StrokeSense takes a novel, machine learning based approach to determining whether someone is having a stroke by analyzing their speech patterns and facial appearance. It offers a cheap and efficient way for everyone from emergency professionals to concerned relatives to ensure that stroke patients can get the appropriate medical health.
+Although strokes are the 2nd most common cause of death around the world (10.8% of all deaths result from strokes), more than 73% of people do not know how to identify if someone is suffering from a stroke. StrokeSense takes a novel, machine learning based approach to determining whether someone is having a stroke by analyzing their speech patterns and facial appearance. It offers a cheap and efficient way for everyone from emergency professionals to concerned relatives to ensure that stroke patients can get the appropriate medical assistance.
 
 Our audio and face segmentation models have predictive accuracies (Areas Under the ROC Curve) of .997 and .940 respectively.
 
@@ -11,7 +11,7 @@ Our audio and face segmentation models have predictive accuracies (Areas Under t
 ![alt text](https://github.com/vatsalag99/StrokeSense/blob/master/banner-fast.jpg)
 
 ## Software
-We use the following software in our application:
+We use the following software frameworks in our application:
 * Python (SciKit-Learn and NumPy)
 * Google's AutoML Face Detection API
 * Swift
@@ -20,7 +20,7 @@ We use the following software in our application:
 ## Usage
 ### Installation
 `$ git clone https://github.com/vatsalag99/StrokeSense.git`
-Make sure you untar the rfTemp.tar.bz2 and delete the compressed version of the file. 
+Please make sure you extract the file rfTemp.tar.bz2 and delete the compressed version of it in your local clone of the repository. 
 
 ### Setup
 ```python
