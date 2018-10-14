@@ -4,19 +4,22 @@ StrokeSense is a Python-based iOS application for stroke detection.
 ## About
 Although strokes are the 2nd most common cause of death around the world (10.8% of all deaths result from strokes), more than 73% of people do not know how to identify if someone is suffering from a stroke. StrokeSense takes a novel, machine learning based approach to determining whether someone is having a stroke by analyzing their speech patterns and facial appearance. It offers a cheap and efficient way for everyone from emergency professionals to concerned relatives to ensure that stroke patients can get the appropriate medical assistance.
 
-StrokeSense uses one machine learning model to analyze a person's face and another to analyze their speech. 
+StrokeSense uses two machine learning models: one to analyze their speech and another to analyze a person's face. Our system is inspired by the FAST methodology, and we look for two symptoms of patients experiencing a stroke. The first is known as dysarthria, which involves slurred speech. The second, known as palsy, is a condition in which loss of motor control on one side of the body causes facial paralysis and a droopy face.
 
-Our audio and face segmentation models have predictive accuracies (Areas Under the ROC Curve) of .997 and .940 respectively.
-
-(Area Under the ROC Curve, or AUC, is a metric used to quantify a classifier's discriminatory power. The AUC ranges from 0.5 to 1.0, where 0.5 corresponds to random prediction and 1.0 corresponds to perfect accuracy).
+Our audio analysis model predicts dysarthria with a predictive accuracy of 0.997, and our facial analysis model predicts whether someone is exhibiting palsy with a predictive accuracy of 0.940. (We use Area Under the ROC Curve, or AUC, to quantify our classifiers' discriminatory power. The AUC ranges from 0.5 to 1.0, where 0.5 corresponds to random prediction and 1.0 corresponds to perfect accuracy).
 
 ![alt text](https://github.com/vatsalag99/StrokeSense/blob/master/banner-fast.jpg)
 
-## Details
+## Implementation Details
 
-For our machine learning model architecture, we combined two separate approaches for speech analysis and facial appearance. The speech samples were analyzed using a Radial Basis Function kernel Support Vector Machine (RBF SVM) and a Random Forest. RBF kernels allow us to map infinite dimension inputs to 2 dimensions enabling us to classify and visualize results in an effective and efficient manner. Furthermore, the Random Forest itself is a ensemble method which uses individual decision trees that evaluate different charactersitics of the audio file to determine whether it represents a healthy or stroke patient. Each of these algorithms outputs an individual probability of the patient having a stroke and being healthy which are then averaged as the final probability of the patient having a stroke based on their speech.
+For our machine learning model architecture, we combined two separate approaches for speech analysis and facial appearance. The speech samples were analyzed using a Radial Basis Function kernel Support Vector Machine (RBF SVM) and a Random Forest. RBF kernels allow us to map infinite dimension inputs to 2 dimensions enabling us to classify and visualize results in an effective and efficient manner. Furthermore, the Random Forest itself is a ensemble method which uses individual decision trees that evaluate different charactersitics of the audio file to determine whether it represents a healthy or stroke patient. Each of these algorithms outputs an individual probability of the patient having a stroke and being healthy, and these probabilities are then averaged to obtain an ensemble prediction of whether the patient is exhibiting dysarthria in their speech. 
 
-Regarding the image analysis, the program takes the input of the patient's face and uses the Google AutoML API to determine the landmark features of their face (eyes, lips, nose, etc.). From this, a parser extracts the exact coordinates from each of five lip coordinates and creates a vector of 15 total coordinates. This vector is then sent to a Random Forest classifier which based on specific criteria of the lip coordinates 
+Regarding our image analysis model, the program takes an input image of the patient's face and uses the Google AutoML API to determine the landmark features of their face (eyes, lips, nose, etc.). From this, a parser extracts the exact coordinates from each of five lip coordinates and creates a vector of 15 total coordinates. These feature vectors are extracted from both patients who exhibit palsy and those who do not, and we use them to train a Random Forest classifier which predicts whether a patient has palsy based on their lip coordinates.
+
+
+## Training and Evaluation
+
+
 
 ![alt text](https://github.com/vatsalag99/StrokeSense/blob/master/ML_Diagram.png)
 
