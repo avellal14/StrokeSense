@@ -13,11 +13,12 @@ We use the following software in our application:
 
 ## Usage
 ### Installation
-'$ git clone https://github.com/vatsalag99/StrokeSense.git'
+`$ git clone https://github.com/vatsalag99/StrokeSense.git`
 
 ### Setup
-'''python
+```python
 import StrokeSense
+```
 
 ## Future Plans and Scalabiliy
 Within our 24 hour hack at HackDuke, we were able to get very impressive results on stroke detection through the FAST approach used by first responders. However, we believe that this architecture has the potential to expand across the broad field of emergency medicine.
