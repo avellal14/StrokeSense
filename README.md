@@ -2,8 +2,7 @@
 StrokeSense is a Python-based iOS application for stroke detection.
 
 ## About
-Although it is the 2nd most common cause of death around the world at 10.8% of all deaths resulting from strokes, more than 73% of people do not know how to identify if someone is suffering from a stroke. StrokeSense takes a novel, machine learning based approach on the dire need for effectively determining whether someone is having a stroke by analyzing speech and appearance.
-
+Although strokes are the 2nd most common cause of death around the world(10.8% of all deaths result from strokes),more than 73% of people do not know how to identify if someone is suffering from a stroke. StrokeSense takes a novel, machine learning based approach to determining whether someone is having a stroke by analyzing their speech patterns and facial appearance. It offers a cheap and efficient way 
 ![alt text](https://github.com/vatsalag99/StrokeSense/blob/master/banner-fast.jpg)
 
 ## Software
