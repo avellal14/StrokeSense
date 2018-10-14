@@ -18,8 +18,10 @@ Regarding our image analysis model, the program takes an input image of the pati
 
 
 ## Training and Evaluation
+### Data
+Bell's Palsy Images: https://www.facialparalysisinstitute.com/photo-gallery/, https://meded.ucsd.edu/clinicalimg/neuro_central_cn7_palsy2.htm
 
-
+Audio Files (Slurred and Normal): http://www.cs.toronto.edu/~complingweb/data/TORGO/torgo.html
 
 ![alt text](https://github.com/vatsalag99/StrokeSense/blob/master/ML_Diagram.png)
 
