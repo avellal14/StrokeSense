@@ -42,6 +42,10 @@ AUC: 0.940
 
 
 ## Integration with iOS app via Firebase
+Our iOS app works with Firebase to ensure a smooth transfer between backend and frontend. Using existing API structure, we dynamically 
+add audio and image files to a storage bucket. This information also is added to a database with one instance per individual. We then extract the test files and run our custom machine learning algorithms through Google Datalab and then provide the probability that 
+the individual has a stroke. 
+
 
 ## Software
 We use the following software frameworks in our application:
