@@ -1,6 +1,0 @@
-Link to the library GitHub: https://github.com/tyiannak/pyAudioAnalysis.git
-
-A link was used because the library was too large to compress and upload.
-
-Noted Changes:
-- In audioFeatureExtraction.py, we changed the mt_win and mt_step parameters in the mtFeatureExtractionToFile methods from constants to be proportional to file length for the improved scanning of the audio files.
