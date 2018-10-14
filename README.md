@@ -16,6 +16,7 @@ We use the following software in our application:
 ## Usage
 ### Installation
 `$ git clone https://github.com/vatsalag99/StrokeSense.git`
+Make sure you untar the rfTemp.tar.bz2 and delete the compressed version of the file. 
 
 ### Setup
 ```python
