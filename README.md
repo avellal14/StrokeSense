@@ -16,14 +16,30 @@ For our machine learning model architecture, we combined two separate approaches
 
 Regarding our image analysis model, the program takes an input image of the patient's face and uses the Google AutoML API to determine the landmark features of their face (eyes, lips, nose, etc.). From this, a parser extracts the exact coordinates from each of five lip coordinates and creates a vector of 15 total coordinates. These feature vectors are extracted from both patients who exhibit palsy and those who do not, and we use them to train a Random Forest classifier which predicts whether a patient has palsy based on their lip coordinates.
 
+![alt text](https://github.com/vatsalag99/StrokeSense/blob/master/ML_Diagram.png)
 
 ## Training and Evaluation
-### Data
-Bell's Palsy Images: https://www.facialparalysisinstitute.com/photo-gallery/, https://meded.ucsd.edu/clinicalimg/neuro_central_cn7_palsy2.htm
+We used data from the following 2 sources to train and evaluate our two machine learning models:
 
-Audio Files (Slurred and Normal): http://www.cs.toronto.edu/~complingweb/data/TORGO/torgo.html
+Audio Files (Dysarthria and Normal): http://www.cs.toronto.edu/~complingweb/data/TORGO/torgo.html
 
-![alt text](https://github.com/vatsalag99/StrokeSense/blob/master/ML_Diagram.png)
+Bell's Palsy Image Data: https://www.facialparalysisinstitute.com/photo-gallery/, https://meded.ucsd.edu/clinicalimg/neuro_central_cn7_palsy2.htm
+
+We trained and optimized our audio analysis model using 10-fold cross validation with 4168 .wav audio files.
+We then tested the model on an independent set of 1967 .wav files, and we obtained the following results:
+
+% Accuracy: 97.6
+F1-score: 0.965
+AUC: 0.997
+
+
+For our facial analysis model, we simply used 3-fold cross validation for training and evaluation because we did not have a large number of images of patients with palsy. We had 336 images of normal patients, and 86 images of patients with palsy,
+producing the following results:
+
+% Accuracy: 90.3
+F1-score: 0.713
+AUC: 0.940
+
 
 ## Software
 We use the following software frameworks in our application:
