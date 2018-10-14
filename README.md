@@ -65,8 +65,6 @@ import StrokeSense
 ```
 
 ## Future Plans and Scalabiliy
-Within our 24 hour hack at HackDuke, we were able to get very impressive results on stroke detection through the FAST approach used by first responders. However, we believe that this architecture has the potential to expand across the broad field of emergency medicine.
+Within the past 24 hours, we were able to develop a computational approach for mobile-based stroke detection that demonstrated a high level of accuracy. This framework is based off of the FAST approach used by first responders, and we believe that this architecture has the potential to expand across the broad field of emergency medicine.
 
-The future of this platform is two-fold, the first being a further implementation of emergency response through the effective integration of Electronic Health Records (EHRs) with patients that are at severe risk for a given disease and the second, an alternative integration in third world countries.
-
-We also forsee an integration of an online learning models by partnering with healthcare providers through recieving feedback on StrokeSense's performance (i.e. whether it diagnosed the patient correct or there was a false positive).
+The future of this platform is two-fold: the first is a further implementation of emergency response through the effective integration of Electronic Health Records (EHRs) with patients that are at severe risk for a given disease. By combining this app's data with EHR information, we can help medical professionals develop a holistic picture of patients' disease history and future medical risks. This app also has a lot of potential to be a cost-effective and efficient method for diagnosing strokes in third world countries.
