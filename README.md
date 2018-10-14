@@ -12,6 +12,14 @@ Our audio and face segmentation models have predictive accuracies (Areas Under t
 
 ![alt text](https://github.com/vatsalag99/StrokeSense/blob/master/banner-fast.jpg)
 
+## Details
+
+For our machine learning model architecture, we combined two separate approaches for speech analysis and facial appearance. The speech samples were analyzed using a Radial Basis Function kernel Support Vector Machine (RBF SVM) and a Random Forest. RBF kernels allow us to map infinite dimension inputs to 2 dimensions enabling us to classify and visualize results in an effective and efficient manner. Furthermore, the Random Forest itself is a ensemble method which uses individual decision trees that evaluate different charactersitics of the audio file to determine whether it represents a healthy or stroke patient. Each of these algorithms outputs an individual probability of the patient having a stroke and being healthy which are then averaged as the final probability of the patient having a stroke based on their speech.
+
+Regarding the image analysis, the program takes the input of the patient's face and uses the Google AutoML API to determine the landmark features of their face (eyes, lips, nose, etc.). From this, a parser extracts the exact coordinates from each of five lip coordinates and creates a vector of 15 total coordinates. This vector is then sent to a Random Forest classifier which based on specific criteria of the lip coordinates 
+
+![alt text](https://github.com/vatsalag99/StrokeSense/blob/master/ML_Diagram.png)
+
 ## Software
 We use the following software frameworks in our application:
 * Python (SciKit-Learn and NumPy)
