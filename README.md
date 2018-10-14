@@ -28,18 +28,20 @@ Bell's Palsy Image Data: https://www.facialparalysisinstitute.com/photo-gallery/
 We trained and optimized our audio analysis model using 10-fold cross validation with 4168 .wav audio files.
 We then tested the model on an independent set of 1967 .wav files, and we obtained the following results:
 
-% Accuracy: 97.6
-F1-score: 0.965
+% Accuracy: 97.6,
+F1-score: 0.965,
 AUC: 0.997
 
 
 For our facial analysis model, we simply used 3-fold cross validation for training and evaluation because we did not have a large number of images of patients with palsy. We had 336 images of normal patients, and 86 images of patients with palsy,
 producing the following results:
 
-% Accuracy: 90.3
-F1-score: 0.713
+% Accuracy: 90.3,
+F1-score: 0.713,
 AUC: 0.940
 
+
+## Integration with iOS app via Firebase
 
 ## Software
 We use the following software frameworks in our application:
